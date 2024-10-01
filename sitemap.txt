@@ -1,3 +1,4 @@
+https://blog.twelveeee.top/2024/CTF/BCTF2024/test/
 https://blog.twelveeee.top/2024/CTF/BCTF2024/iot/
 https://blog.twelveeee.top/2024/CTF/BCTF2024/reverse/
 https://blog.twelveeee.top/2024/HighAvailability/distributed_transaction/
