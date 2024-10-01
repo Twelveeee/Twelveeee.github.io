@@ -13,96 +13,135 @@
         <pubDate>Tue, 01 Oct 2024 21:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 01 Oct 2024 21:00:00 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://blog.twelveeee.top/2024/CTF/BCTF2024/test/</guid>
-            <title>BCTF2024-测试</title>
-            <link>https://blog.twelveeee.top/2024/CTF/BCTF2024/test/</link>
+            <guid isPermalink="true">https://blog.twelveeee.top/2024/Project/hexo-github-action-deploy/</guid>
+            <title>Hexo 使用github Action 进行发布</title>
+            <link>https://blog.twelveeee.top/2024/Project/hexo-github-action-deploy/</link>
             <category term="计算机科学" scheme="https://blog.twelveeee.top/categories/computerScience/" />
-            <category term="CTF" scheme="https://blog.twelveeee.top/categories/computerScience/CTF/" />
-            <category term="BCTF2024" scheme="https://blog.twelveeee.top/categories/computerScience/CTF/BCTF2024/" />
-            <category term="CTF" scheme="https://blog.twelveeee.top/tags/CTF/" />
+            <category term="Project" scheme="https://blog.twelveeee.top/categories/computerScience/Project/" />
+            <category term="github" scheme="https://blog.twelveeee.top/tags/github/" />
             <pubDate>Tue, 01 Oct 2024 21:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;bctf2024-测试-01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bctf2024-测试-01&#34;&gt;#&lt;/a&gt; BCTF2024 - 测试 - 01&lt;/h1&gt;
-&lt;h2 id=&#34;查看bin文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看bin文件&#34;&gt;#&lt;/a&gt; 查看 bin 文件&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;猜猜 flag 藏在哪&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90d2VsdmVlZWUtbm90ZS5vc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20vZmlsZS9iY3RmMjAyNC9vdXRwdXQuYmlu&#34;&gt;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/file/bctf2024/output.bin&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;details class=&#34;warning&#34;&gt;&lt;summary&gt;答案&lt;/summary&gt;&lt;div&gt;
-&lt;p&gt;&lt;span class=&#34;spoiler bulr&#34; title=&#34;你知道得太多了&#34;&gt;flag{a2467320ce0f9bc6fda0a1f714e49933}&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;details class=&#34;success&#34;&gt;&lt;summary&gt;题解&lt;/summary&gt;&lt;div&gt;
-&lt;p&gt;直接编辑器打开 就能找到 flag&lt;/p&gt;
-&lt;p&gt;或者 strings ouput.bin | grep flag&lt;/p&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;h2 id=&#34;app端硬编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#app端硬编码&#34;&gt;#&lt;/a&gt; app 端硬编码&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小洋是一名移动前端开发工程师，一天他和后端开发工程师在调试授权认证服务，之后就愉快的发布了&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90d2VsdmVlZWUtbm90ZS5vc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20vZmlsZS9iY3RmMjAyNC9hcHAtZGVidWcuYXBr&#34;&gt;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/file/bctf2024/app-debug.apk&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;details class=&#34;warning&#34;&gt;&lt;summary&gt;答案&lt;/summary&gt;&lt;div&gt;
-&lt;p&gt;&lt;span class=&#34;spoiler bulr&#34; title=&#34;你知道得太多了&#34;&gt;flag{755bc1e8fe421b40fbb225cb47a01bdb}&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;details class=&#34;success&#34;&gt;&lt;summary&gt;题解&lt;/summary&gt;&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;
-# 安装 apktool
-# https://apktool.org/docs/install/
-
-# 解包
-apktool d app-debug.apk
-
-
-# 翻一下路径，最后发现在
-# 路径 app-debug/smali_classes3/com/bctf2024/bctftest/MainActivity.smali
-
-# 有这么一行代码
-const-string v4, &amp;quot;ZmxhZ3s3NTViYzFlOGZlNDIxYjQwZmJiMjI1Y2I0N2EwMWJkYn0=&amp;quot;
-
-解一下base64
-
+            <description><![CDATA[ &lt;h1 id=&#34;hexo-使用github-action-发布&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-使用github-action-发布&#34;&gt;#&lt;/a&gt; Hexo 使用 github Action 发布&lt;/h1&gt;
+&lt;h2 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h2&gt;
+&lt;p&gt;Github Actions 可以很方便实现 CI/CD 工作流，类似 Travis 的用法，来帮我们完成一些工作，比如实现自动化测试、打包、部署等操作。当我们运行 Jobs 时，它会创建一个容器 (runner)，容器支持：Ubuntu、Windows 和 MacOS 等系统，在容器中我们可以安装软件，利用安装的软件帮我们处理一些数据，然后把处理好的数据推送到某个地方。&lt;/p&gt;
+&lt;p&gt;本文将介绍利用 Github Actions 实现自动部署 hexo 到 Github Pages 和阿里云 oss&lt;/p&gt;
+&lt;p&gt;没有 Github Actions 之前，我们需要写完文章执行  &lt;code&gt;hexo d&lt;/code&gt;  来进行部署。有了 Github Actions  之后，workflow 会自动部署我们的笔记。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前提&#34;&gt;#&lt;/a&gt; 前提&lt;/h2&gt;
+&lt;h3 id=&#34;创建所需仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建所需仓库&#34;&gt;#&lt;/a&gt; 创建所需仓库&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个 github 仓库用来存放 Hexo 项目，我这边是  &lt;code&gt;Twelveeee/MyNotesBlog&lt;/code&gt;  一个 private 的仓库&lt;/li&gt;
+&lt;li&gt;创建  &lt;code&gt;your.github.io&lt;/code&gt;  仓库用来存放静态博客 github page，我这边是  &lt;code&gt;Twelveeee/Twelveeee.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;配置-githubtoken&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-githubtoken&#34;&gt;#&lt;/a&gt; 配置 GithubToken&lt;/h3&gt;
+&lt;p&gt;GithubToken 是为了在执行 githubAction 的时候有权限访问仓库&lt;/p&gt;
+&lt;p&gt;参考 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLjUxY3RvLmNvbS91XzE1MDY5NDg1LzM1OTAzNDY=&#34;&gt;https://blog.51cto.com/u_15069485/3590346&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在 github setting 打开 Developer settings&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/image-20241001233238214.png&#34; alt=&#34;image-20241001233238214&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;打开 Personal access tokens&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/image-20241001233409638.png&#34; alt=&#34;image-20241001233409638&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;点击 Generate new token 按钮&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/image-20241001233508640.png&#34; alt=&#34;image-20241001233508640&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;选择对应的仓库&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/image-20241001233811094.png&#34; alt=&#34;image-20241001233811094&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Permissions&lt;/strong&gt; 开&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Read access to actions variables and secrets&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Read and Write access to actions, code, commit statuses, deployments, environments, pages, pull requests, and workflows&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;获取到 token 记录下来&lt;/p&gt;
+&lt;h3 id=&#34;配置-githubaction-参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置-githubaction-参数&#34;&gt;#&lt;/a&gt; 配置 GithubAction 参数&lt;/h3&gt;
+&lt;p&gt;打开项目，  &lt;code&gt;Settinngs-&amp;gt;Secrets and variables New repository secret&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/image-20241002000219935.png&#34; alt=&#34;image-20241002000219935&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;把上面提到的 token 写进去 变量名称需要与下面的 deploy.yml 一致&lt;/p&gt;
+&lt;h2 id=&#34;编写-github-actions&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编写-github-actions&#34;&gt;#&lt;/a&gt; 编写 Github Actions&lt;/h2&gt;
+&lt;h3 id=&#34;workflow-模版&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#workflow-模版&#34;&gt;#&lt;/a&gt; Workflow 模版&lt;/h3&gt;
+&lt;p&gt;在  &lt;code&gt;blog&lt;/code&gt;  仓库根目录下创建  &lt;code&gt;.github/workflows/deploy.yml&lt;/code&gt;  文件，目录结构如下。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;blog (repository)
+└── .github
+    └── workflows
+        └── deploy.yml
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;h2 id=&#34;代码还原&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码还原&#34;&gt;#&lt;/a&gt; 代码还原&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小浩是一名运维工程师，一次项目运维中，他误删除了一些脚本代码，看着缓存目录&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/file/bctf2024/__pycache__.zip&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;details class=&#34;warning&#34;&gt;&lt;summary&gt;答案&lt;/summary&gt;&lt;div&gt;
-&lt;p&gt;&lt;span class=&#34;spoiler bulr&#34; title=&#34;你知道得太多了&#34;&gt;flag{ffa04431e7c7a6b4959654ad082f74fb}&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;details class=&#34;success&#34;&gt;&lt;summary&gt;题解&lt;/summary&gt;&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;
-pip3 install uncompyle6
-
-uncompyle6 -o . __pycache__/pluginbase.cpython-36.pyc
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;h2 id=&#34;可执行文件反编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可执行文件反编译&#34;&gt;#&lt;/a&gt; 可执行文件反编译&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;题目&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;小明写了个 python 小程序，为了防止代码泄漏，编译成了可执行文件&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90d2VsdmVlZWUtbm90ZS5vc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20vZmlsZS9iY3RmMjAyNC9tYWlu&#34;&gt;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/file/bctf2024/main&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;details class=&#34;warning&#34;&gt;&lt;summary&gt;答案&lt;/summary&gt;&lt;div&gt;
-&lt;p&gt;&lt;span class=&#34;spoiler bulr&#34; title=&#34;你知道得太多了&#34;&gt;flag{30a859e0efdaaf31adc8ca8326a4f8ba}&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/details&gt;
-&lt;details class=&#34;success&#34;&gt;&lt;summary&gt;题解&lt;/summary&gt;&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;
-pip3 install pyinstaller
-
-wget https://github.com/extremecoders-re/pyinstxtractor/blob/master/pyinstxtractor.py
-
-python3 pyinstxtractor.py main
-
-cd main_extracted
-
-uncompyle6 main.pyc &amp;gt; main.py
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;/details&gt;
+&lt;p&gt;在  &lt;code&gt;deploy.yml&lt;/code&gt;  文件中粘贴以下内容。并且更改 env 为自己对应的值。&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Pages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;GIT_USER&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Twelveeee&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;GIT_EMAIL&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; twelveeee12@gmail.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;THEME_REPO&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Twelveeee/hexo&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;theme&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;shokaV2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;THEME_BRANCH&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; master&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;THEME_NAME&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; shoka&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;DEPLOY_REPO&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Twelveeee/Twelveeee.github.io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;DEPLOY_BRANCH&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; ubuntu&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; actions/checkout@v4&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;secrets.PAT_TOKEN&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;submodules&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; recursive&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Configuration environment&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token scalar string&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          sudo timedatectl set-timezone &#34;Asia/Shanghai&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          git config --global user.name $GIT_USER&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          git config --global user.email $GIT_EMAIL&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Checkout theme repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; actions/checkout@v4&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; env.THEME_REPO &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; env.THEME_BRANCH &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; themes/$&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; env.THEME_NAME &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; secrets.PAT_TOKEN &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Checkout deploy repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; actions/checkout@v4&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; env.DEPLOY_REPO &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; env.DEPLOY_BRANCH &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; .deploy_git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; secrets.PAT_TOKEN &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Use Node.js 20&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; actions/setup&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;node@v4&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;node-version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;20&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Cache NPM dependencies&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; actions/cache@v4&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; node_modules&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;56&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; runner.OS &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;npm&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;cache&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;57&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;restore-keys&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token scalar string&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;58&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            $&amp;#123;&amp;#123; runner.OS &amp;#125;&amp;#125;-npm-cache&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;59&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Install Dependencies&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;60&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; npm install&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;61&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;62&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Deploy hexo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;63&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;64&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          &lt;span class=&#34;token key atrule&#34;&gt;GITHUB_TOKEN&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; $&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; secrets.PAT_TOKEN &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;65&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token scalar string&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;66&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          npm run deploy&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;模版说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模版说明&#34;&gt;#&lt;/a&gt; 模版说明&lt;/h3&gt;
+&lt;h4 id=&#34;workflow-overview&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#workflow-overview&#34;&gt;#&lt;/a&gt; Workflow Overview&lt;/h4&gt;
+&lt;p&gt;这个工作流名为  &lt;code&gt;Pages&lt;/code&gt; ，在  &lt;code&gt;main&lt;/code&gt;  分支有新的推送时会被触发。都会自动更新博客的内容。&lt;/p&gt;
+&lt;h4 id=&#34;environment-variables&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#environment-variables&#34;&gt;#&lt;/a&gt; Environment Variables&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GIT_USER&lt;/strong&gt;: Git 用户名，用于配置 Git 提交。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GIT_EMAIL&lt;/strong&gt;: Git 邮箱地址，用于配置 Git 提交。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;THEME_REPO&lt;/strong&gt;: Hexo 主题的仓库地址。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;THEME_BRANCH&lt;/strong&gt;: Hexo 主题的分支。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;THEME_NAME&lt;/strong&gt;: Hexo 主题的名称。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DEPLOY_REPO&lt;/strong&gt;: 部署的 GitHub Pages 仓库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DEPLOY_BRANCH&lt;/strong&gt;: 部署的分支。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;job-build&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#job-build&#34;&gt;#&lt;/a&gt; Job: build&lt;/h4&gt;
+&lt;p&gt;这个工作流定义了一个名为  &lt;code&gt;build&lt;/code&gt;  的作业，运行在最新的 Ubuntu 环境上。&lt;/p&gt;
+&lt;h5 id=&#34;steps&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#steps&#34;&gt;#&lt;/a&gt; Steps&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Checkout Main Repository&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;使用  &lt;code&gt;actions/checkout@v4&lt;/code&gt;  来签出触发工作流的主仓库代码。&lt;/li&gt;
+&lt;li&gt;使用  &lt;code&gt;$&amp;#123;&amp;#123; secrets.PAT_TOKEN &amp;#125;&amp;#125;&lt;/code&gt;  作为身份验证令牌。&lt;/li&gt;
+&lt;li&gt;递归地签出子模块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Configuration Environment&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;设置时区为 &amp;quot;Asia/Shanghai&amp;quot;。&lt;/li&gt;
+&lt;li&gt;配置 Git 用户名和邮箱，以便后续的提交操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checkout Theme Repository&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;使用  &lt;code&gt;actions/checkout@v4&lt;/code&gt;  签出主题仓库。&lt;/li&gt;
+&lt;li&gt;指定分支和路径为  &lt;code&gt;themes/$&amp;#123;&amp;#123; env.THEME_NAME &amp;#125;&amp;#125;&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;使用  &lt;code&gt;$&amp;#123;&amp;#123; secrets.PAT_TOKEN &amp;#125;&amp;#125;&lt;/code&gt;  进行身份验证。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checkout Deploy Repository&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;使用  &lt;code&gt;actions/checkout@v4&lt;/code&gt;  签出用于部署的仓库。&lt;/li&gt;
+&lt;li&gt;指定分支和路径为  &lt;code&gt;.deploy_git&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;使用  &lt;code&gt;$&amp;#123;&amp;#123; secrets.PAT_TOKEN &amp;#125;&amp;#125;&lt;/code&gt;  进行身份验证。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use Node.js 20&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;使用  &lt;code&gt;actions/setup-node@v4&lt;/code&gt;  来设置 Node.js 环境，版本为 20。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cache NPM Dependencies&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;使用  &lt;code&gt;actions/cache@v4&lt;/code&gt;  缓存  &lt;code&gt;node_modules&lt;/code&gt;  目录，以加速后续的构建。&lt;/li&gt;
+&lt;li&gt;使用  &lt;code&gt;$&amp;#123;&amp;#123; runner.OS &amp;#125;&amp;#125;-npm-cache&lt;/code&gt;  作为缓存键。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install Dependencies&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;运行  &lt;code&gt;npm install&lt;/code&gt;  安装项目所需的依赖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deploy Hexo&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;设置  &lt;code&gt;GITHUB_TOKEN&lt;/code&gt;  环境变量，用于身份验证。&lt;/li&gt;
+&lt;li&gt;运行  &lt;code&gt;npm run deploy&lt;/code&gt; ，执行 Hexo 部署脚本，将生成的静态文件推送到 GitHub Pages 仓库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;部署注意事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署注意事项&#34;&gt;#&lt;/a&gt; 部署注意事项&lt;/h3&gt;
+&lt;p&gt;因为使用到了  &lt;code&gt;npm run deploy&lt;/code&gt;  所以  &lt;code&gt;package.json&lt;/code&gt;  里面要有 deploy&lt;/p&gt;
+&lt;figure class=&#34;highlight json&#34;&gt;&lt;figcaption data-lang=&#34;JSON&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;&#34;scripts&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;&#34;build&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo generate&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;&#34;clean&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo clean&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;&#34;deploy&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo deploy&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;&#34;server&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hexo server&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;使用  &lt;code&gt;hexo deploy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;所以需要确保安装了 hexo deploy 服务&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 发布到 oss&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i hexo-deployer-ali-oss-extend&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 发布到 github page &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-deployer-git &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;并且配置了相应的配置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt;  里&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; ali&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;oss&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;region&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; oss&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;cn&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;beijing&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;accessKeyId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token important&#34;&gt;***&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;accessKeySecret&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token important&#34;&gt;***&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;bucket&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token important&#34;&gt;***&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;cacheControl&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;images&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;css&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;js&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;other&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//github.com/Twelveeee/Twelveeee.github.io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;branch&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; main&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;当然，如果没有对应的 type 可以将相应的配置注释掉。&lt;/p&gt;
+&lt;h3 id=&#34;执行任务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行任务&#34;&gt;#&lt;/a&gt; 执行任务&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/image-20241002001734778.png&#34; alt=&#34;image-20241002001734778&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;任务完成之后查看 对应的 github page&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90d2VsdmVlZWUuZ2l0aHViLmlvLw==&#34;&gt;https://twelveeee.github.io/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;确实有相应的文章&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2l0aHViLXBhZ2VzI09uZS1jb21tYW5kLWRlcGxveW1lbnQ=&#34;&gt;https://hexo.io/docs/github-pages#One-command-deployment&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zYW5vbnouZ2l0aHViLmlvLzIwMjAvZGVwbG95LWEtaGV4by1ibG9nLWZyb20tZ2l0aHViLWFjdGlvbnMv&#34;&gt;https://sanonz.github.io/2020/deploy-a-hexo-blog-from-github-actions/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FjdGlvbnMvY2hlY2tvdXQ=&#34;&gt;https://github.com/actions/checkout&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
