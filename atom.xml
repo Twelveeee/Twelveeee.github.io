@@ -8,7 +8,33 @@
     <author>
       <name>Twelveeee</name>
     </author>
-    <updated>2026-02-02T16:45:00.000Z</updated>
+    <updated>2026-02-11T14:00:00.000Z</updated>
+    <entry>
+        <id>https://blog.twelveeee.top/2026/RandomThoughts/2026WeClone/</id>
+        <title>26年新年前 vibe coding 感慨</title>
+        <link rel="alternate" href="https://blog.twelveeee.top/2026/RandomThoughts/2026WeClone/"/>
+        <content type="html">&lt;h1 id=&#34;vibe-coding-感慨&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vibe-coding-感慨&#34;&gt;#&lt;/a&gt; vibe coding 感慨&lt;/h1&gt;
+&lt;p&gt;这几天看到一个项目，叫做 WeClone，作用是使用聊天记录训练出一个自己，越看越感慨。&lt;/p&gt;
+&lt;p&gt;其实早在 2021 年，我就在一次会议上提过类似的想法，我要用微信聊天记录克隆一个电子版的自己。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/202602112049382.png&#34; alt=&#34;image-20260211204933761&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;23 年，就已经有能够提取微信聊天记录的项目了，叫做 《留痕》WeChatMsg，我很欣赏这个项目，我也提过 PR，我虽然想到要做可克隆自己这件事情，但是我没有去做。&lt;/p&gt;
+&lt;p&gt;24 年，LLM 上下文长度突破了 1M，WeClone 的第一个 commit 就在 24 年 5 月。&lt;/p&gt;
+&lt;p&gt;25 年，WeClone 的 star 破了 10k。&lt;/p&gt;
+&lt;p&gt;回头一看，我明明有很多次机会可以开始&lt;br /&gt;
+早在实习的时候，晓辉哥问我职业规划，我说我要学 NLP，现在呢？23 年聊天记录都能提取了。24 年甚至模型都不用训练了，直接用 LLM 就行了。&lt;/p&gt;
+&lt;p&gt;但是我总是停留在 “想到”，却没有去 “做到”&lt;/p&gt;
+&lt;p&gt;类似的情况不止一次，&lt;/p&gt;
+&lt;p&gt;我觉得 API 网站太多太乱了，应该有个能够聚合的地方，后来有了 new-api、openrouter。&lt;br /&gt;
+我觉得画流程图太麻烦了，能不能 ai 来画，后来有了 next-ai-draw-io（我还是 contributors ）&lt;br /&gt;
+我觉得各种网站各种资讯好多好杂乱，能不能 ai 筛选和总结，后面发现这种工具早就满大街都是了。&lt;/p&gt;
+&lt;p&gt;我总是有很多想法，却很少行动。等到别人做成了，才暗戳戳说一句 “我也想过”，有什么用呢？&lt;/p&gt;
+&lt;p&gt;今天用 Codex vibe 了一整天，更觉得感慨。想法 -&amp;gt; 产品，最难的那部分 &amp;quot;写代码&amp;quot; 已经能够完全使用 AI 替代了，现在最大的障碍或许只剩下 “开始”。&lt;/p&gt;
+&lt;p&gt;新年快到了，希望 2026 年的我，能真的把想法落地，不再只做那个 “事后感慨的人”。&lt;/p&gt;
+&lt;p&gt;2026-02-11&lt;/p&gt;
+</content>
+        <category term="随便写写" scheme="https://blog.twelveeee.top/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" />
+        <updated>2026-02-11T14:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.twelveeee.top/2026/AI/clawdbot_linuxdo_ga4/</id>
         <title>社区驱动型流量的转化效能与质量特征分析</title>
@@ -1515,95 +1541,5 @@ Rick&lt;/p&gt;
         <category term="MySQL" scheme="https://blog.twelveeee.top/categories/computerScience/Database/MySQL/" />
         <category term="MySQL" scheme="https://blog.twelveeee.top/tags/MySQL/" />
         <updated>2024-05-26T04:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.twelveeee.top/2024/Project/copilot-gpt4-service/</id>
-        <title>搭建使用github copilot的 ChatGPT Next Web</title>
-        <link rel="alternate" href="https://blog.twelveeee.top/2024/Project/copilot-gpt4-service/"/>
-        <content type="html">&lt;h1 id=&#34;搭建使用github-copilot的-chatgpt-next-web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建使用github-copilot的-chatgpt-next-web&#34;&gt;#&lt;/a&gt; 搭建使用 github copilot 的 ChatGPT Next Web&lt;/h1&gt;
-&lt;p&gt;项目地址 copilot-gpt4-service &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FhYW1vb24vY29waWxvdC1ncHQ0LXNlcnZpY2U=&#34;&gt;https://github.com/aaamoon/copilot-gpt4-service&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;项目地址 ChatGPT-Next-Web &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NoYXRHUFROZXh0V2ViL0NoYXRHUFQtTmV4dC1XZWI=&#34;&gt;https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;note danger&#34;&gt;
-&lt;p&gt;update:: 2024-06-02&lt;br /&gt;
- 作者本人使用 copilot-gpt4-service 已被封号，请不要再尝试&lt;br /&gt;
-详情查看 &lt;a href=&#34;https://blog.twelveeee.top/2024/Project/copilot-gpt4-service-ban/&#34;&gt;https://blog.twelveeee.top/2024/Project/copilot-gpt4-service-ban/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;note danger&#34;&gt;
-&lt;p&gt;update:: 2024-06-02&lt;br /&gt;
- 作者本人使用 copilot-gpt4-service 已被封号，请不要再尝试&lt;br /&gt;
-详情查看 &lt;a href=&#34;https://blog.twelveeee.top/2024/Project/copilot-gpt4-service-ban/&#34;&gt;https://blog.twelveeee.top/2024/Project/copilot-gpt4-service-ban/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;note danger&#34;&gt;
-&lt;p&gt;update:: 2024-06-02&lt;br /&gt;
- 作者本人使用 copilot-gpt4-service 已被封号，请不要再尝试&lt;br /&gt;
-详情查看 &lt;a href=&#34;https://blog.twelveeee.top/2024/Project/copilot-gpt4-service-ban/&#34;&gt;https://blog.twelveeee.top/2024/Project/copilot-gpt4-service-ban/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;p&gt;最近个人使用 openai 的 api 花费太高了，正好我已经订阅了 github 的 copilot ，很久之前就开始关注 copilot-gpt4-service 这个项目，虽然项目结构写的挺乱的，但是效果还行。&lt;/p&gt;
-&lt;p&gt;按照本文，您需要&lt;/p&gt;
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; 一个外网服务器&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_1&#34;&gt; 一个域名&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_2&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_2&#34;&gt; 正在订阅 github copilot&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;搭建-copilot-gpt4-service&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建-copilot-gpt4-service&#34;&gt;#&lt;/a&gt; 搭建 copilot-gpt4-service&lt;/h1&gt;
-&lt;p&gt;注意！copilot-gpt4-service 不适合 Serverless 类型的提供商进行部署，频繁更换 ip 容易被判断为异常。&lt;/p&gt;
-&lt;h2 id=&#34;获取-copilot-token&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取-copilot-token&#34;&gt;#&lt;/a&gt; 获取 copilot token&lt;/h2&gt;
-&lt;p&gt;按照 github 的教程 走 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FhYW1vb24vY29waWxvdC1ncHQ0LXNlcnZpY2UvYmxvYi9tYXN0ZXIvUkVBRE1FX0NOLm1kIyVFOCU4RSVCNyVFNSU4RiU5Ni1jb3BpbG90LXRva2Vu&#34;&gt;https://github.com/aaamoon/copilot-gpt4-service/blob/master/README_CN.md# 获取 - copilot-token&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;在外网服务器上搭建-copilot-gpt4-service&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在外网服务器上搭建-copilot-gpt4-service&#34;&gt;#&lt;/a&gt; 在外网服务器上搭建 copilot-gpt4-service&lt;/h2&gt;
-&lt;p&gt;由于本文使用的外网服务器性能一般，并且没有安装 docker，所以直接使用二进制文件进行搭建。&lt;/p&gt;
-&lt;h3 id=&#34;下载二进制文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载二进制文件&#34;&gt;#&lt;/a&gt; 下载二进制文件&lt;/h3&gt;
-&lt;p&gt;截至发布文章当日，该项目还没有进行 release 文件，所以目前使用 github action 编译出来的二进制文件&lt;/p&gt;
-&lt;p&gt;在这里面找一个已经编译好的二进制文件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FhYW1vb24vY29waWxvdC1ncHQ0LXNlcnZpY2UvYWN0aW9ucy93b3JrZmxvd3MvYnVpbGQueW1s&#34;&gt;https://github.com/aaamoon/copilot-gpt4-service/actions/workflows/build.yml&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;比如 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FhYW1vb24vY29waWxvdC1ncHQ0LXNlcnZpY2UvYWN0aW9ucy9ydW5zLzc5OTg0NTc2OTk=&#34;&gt;https://github.com/aaamoon/copilot-gpt4-service/actions/runs/7998457699&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;选择机器对应的二进制文件比如 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FhYW1vb24vY29waWxvdC1ncHQ0LXNlcnZpY2UvYWN0aW9ucy9ydW5zLzc5OTg0NTc2OTkvYXJ0aWZhY3RzLzEyNjUwMTUyNzk=&#34;&gt;copilot-gpt4-service-linux-amd64&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;下载下来，scp 到云服务器上&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;scp&lt;/span&gt; /path/to/copilot-gpt4-service-linux-amd64.zip root@ip:/home/user/copilot&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;进入云服务器，解压文件&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; copilot-gpt4-service-linux-amd64.zip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置文件&#34;&gt;#&lt;/a&gt; 配置文件&lt;/h3&gt;
-&lt;p&gt;在  &lt;code&gt;copilot-gpt4-service&lt;/code&gt;  所在目录下 新建文件 &lt;code&gt;config.env&lt;/code&gt;  内容为&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;HOST=0.0.0.0
-PORT=8080
-CACHE=true
-CACHE_PATH=db/cache.sqlite3
-DEBUG=false
-LOGGING=true
-LOG_LEVEL=info
-COPILOT_TOKEN=xxxx
-SUPER_TOKEN=xxxx
-ENABLE_SUPER_TOKEN=true
-RATE_LIMIT=10
-CORS_PROXY_NEXTCHAT=true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;启动服务&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 新增运行权限&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x copilot-gpt4-service&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./copilot-gpt4-service&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;反向代理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反向代理&#34;&gt;#&lt;/a&gt; 反向代理&lt;/h3&gt;
-&lt;p&gt;由于这台机器上还搭建了其他服务，所以我反向代理到 80 端口，监听服务名称&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;server &amp;#123;
-   listen       80;
-   server_name  copilot.example.com;
-   location / &amp;#123;
-            proxy_pass http://127.0.0.1:8123/;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Host $http_host;
-    &amp;#125;
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;配置https&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置https&#34;&gt;#&lt;/a&gt; 配置 https&lt;/h3&gt;
-&lt;p&gt;https 这边用的是 cloudflare 提供的 https，不需要再单独设置 https，直接使用项目 README 里的 https 教程也可以。&lt;/p&gt;
-&lt;p&gt;这边配置域名为 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NvcGlsb3QuZXhhbXBsZS5jb20=&#34;&gt;copilot.example.com&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;搭建-chatgpt-next-web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建-chatgpt-next-web&#34;&gt;#&lt;/a&gt; 搭建 ChatGPT-Next-Web&lt;/h1&gt;
-&lt;p&gt;按照教程 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NoYXRHUFROZXh0V2ViL0NoYXRHUFQtTmV4dC1XZWIvYmxvYi9tYWluL1JFQURNRV9DTi5tZA==&#34;&gt;https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/blob/main/README_CN.md&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;在 Vercel 上搭建 ChatGPT-Next-Web&lt;/p&gt;
-&lt;p&gt;环境变量设置&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;BASE_URL: https://copilot.example.com/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;OPENAI_API_KEY: xxx &lt;span class=&#34;token comment&#34;&gt;# 为 copilot-gpt4-service 配置的 SUPER_TOKEN&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;CODE:xxxx &lt;span class=&#34;token comment&#34;&gt;#密码&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;Vercel 绑定域名 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NoYXQuZXhhbXBsZS5jb20=&#34;&gt;chat.example.com&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;效果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#效果&#34;&gt;#&lt;/a&gt; 效果&lt;/h1&gt;
-&lt;p&gt;已经使用三天时间了，copilot 没有被封，效果也还行。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/202402251051816.png&#34; alt=&#34;image-20240225105128755&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;日志&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://twelveeee-note.oss-cn-beijing.aliyuncs.com/Image/202402251052599.png&#34; alt=&#34;image-20240225105214295&#34; /&gt;&lt;/p&gt;
-</content>
-        <category term="计算机科学" scheme="https://blog.twelveeee.top/categories/computerScience/" />
-        <category term="Project" scheme="https://blog.twelveeee.top/categories/computerScience/Project/" />
-        <category term="github" scheme="https://blog.twelveeee.top/tags/github/" />
-        <updated>2024-02-25T03:00:00.000Z</updated>
     </entry>
 </feed>
